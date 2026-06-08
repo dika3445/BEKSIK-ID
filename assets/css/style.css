@@ -1,0 +1,808 @@
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.85);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+
+/* KIRI: FOTO + NAMA TOKO */
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.store-photo {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.store-photo:hover {
+    transform: scale(1.12);
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* MENU */
+.menu ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ICONS */
+.icons a {
+    margin-left: 15px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    color: white;
+}
+
+.hero-content .tagline {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 17px;
+    border: none;
+    background: #00b050;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #00cf62;
+}
+
+.title-produk {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    padding-top: 50px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 10px;
+}
+
+.product-item {
+    width: 120px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+    transition: 0.2s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-item p {
+    margin: 8px 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-beli {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #007bff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-beli:hover {
+    background: #0056d6;
+}
+
+/* Title Section */
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Tabs */
+.tab-menu a {
+  padding-bottom: 3px;
+  cursor: pointer;
+  color: #555;
+}
+.tab-menu a.tab-active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
+}
+
+/* Product Cards */
+.product-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: center;
+  transition: 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.product-price {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.product-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* Banners */
+.banner-card {
+  background: #007bff;
+  color: white;
+}
+.banner-card-dark {
+  background: #222;
+}
+
+.banner-subtitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.banner-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.btn-banner {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: white;
+  color: #007bff;
+  font-size: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.banner-sale-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.banner-sale-percent {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.banner-sale-text {
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+/* PROFILE SECTION */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    padding-bottom: 40px;
+}
+
+.profile-card {
+    width: 420px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: 0.3s ease;
+    
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+}
+
+.profile-card h2 {
+    margin-bottom: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.profile-info {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.profile-info p {
+    font-size: 15px;
+    margin: 6px 0;
+    color: #444;
+}
+
+.profile-info strong {
+    color: #000;
+}
+
+/* ABOUT / SEPUTAR TOKO */
+.about-section {
+    background: #f8faff;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+@media(min-width:768px) {
+    .about-container {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
+
+.about-text {
+    flex: 1;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .about-text {
+        text-align: left;
+    }
+}
+
+.about-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn-about {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #1d4ed8; /* biru */
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-about:hover {
+    background-color: #2563eb;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* LOKASI TOKO */
+.lokasi-section {
+    background-color: #f1f5f9;
+    padding: 60px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.lokasi-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+@media(min-width:768px) {
+    .lokasi-container {
+        flex-direction: row;
+        gap: 60px;
+    }
+}
+
+.lokasi-text {
+    flex: 1;
+    text-align: center;
+}
+
+@media(min-width:768px) {
+    .lokasi-text {
+        text-align: left;
+    }
+}
+
+.lokasi-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1d4ed8; /* biru */
+}
+
+.lokasi-text p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.lokasi-map {
+    flex: 1;
+    width: 100%;
+}
+
+.lokasi-map iframe {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* SOSIAL MEDIA SECTION */
+.sosmed-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.sosmed-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sosmed-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1d4ed8; /* biru */
+    margin-bottom: 15px;
+}
+
+.sosmed-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.sosmed-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sosmed-icon {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Warna per platform */
+.sosmed-icon.insta { background: #E1306C; }
+.sosmed-icon.wa { background: #25D366; }
+.sosmed-icon.tiktok { background: #000000; }
+.sosmed-icon.fb { background: #1877F2; }
+
+.sosmed-icon:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+/* PEMBAYARAN SALDO */
+.pembayaran-section {
+    background-color: #f8fafc;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.pembayaran-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pembayaran-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1d4ed8; /* biru */
+    margin-bottom: 35px;
+}
+
+.pembayaran-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #1d4ed8; /* biru */
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Wrapper Horizontal Scroll */
+.card-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.card-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-wrapper::-webkit-scrollbar-thumb {
+  background: #1d4ed8;
+  border-radius: 10px;
+}
+
+.card-wrapper::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+/* Card */
+.card {
+  flex: 0 0 280px; /* lebar card */
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: #0f6dfd;
+  margin-bottom: 12px;
+}
+
+.card ol {
+  padding-left: 18px;
+}
+
+.card ol li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 220px;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card ol li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Container Table */
+.table-transaksi {
+    width: 80%;
+    margin: 15px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.table-transaksi thead {
+    background: #f3f4f6;
+}
+
+.table-transaksi thead th {
+    padding: 12px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+/* Body */
+.table-transaksi tbody tr {
+    transition: 0.2s;
+}
+
+.table-transaksi tbody tr:hover {
+    background: #fafafa;
+}
+
+.table-transaksi td {
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #e6e6e6;
+    vertical-align: middle;
+}
+
+/* Foto Thumbnail */
+.img-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Aksi area dengan flex */
+.aksi-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Tombol */
+.btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background: #6c757d;
+    transition: 0.2s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Edit */
+.btn-edit {
+    background: #f39c12;
+}
+
+/* Delete */
+.btn-delete {
+    background: #e74c3c;
+}
+
+/* Tambah */
+.btn-add {
+    background: #27ae60;
+}
+
+/* Judul Riwayat Transaksi */
+h2.ri {
+    text-align: center;        /* Center judul */
+    font-size: 1.6rem;         /* Ukuran font agak besar */
+    font-weight: 600;           /* Tebal tapi tidak terlalu tebal */
+    color: #1d4ed8;             /* Biru sesuai tema */
+    margin: 20px 0;             /* Jarak atas dan bawah */
+    letter-spacing: 0.5px;      /* Sedikit jarak antar huruf */
+    position: relative;
+    padding-top: 40px;
+}
+
+/* Garis bawah dekoratif */
+h2.ri::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #1d4ed8;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
